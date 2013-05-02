@@ -1,6 +1,6 @@
 ﻿requirejs.config({
     paths: {
-        'text': 'durandal/amd/text'
+      'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.3/text.min'
     }
 });
 
