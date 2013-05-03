@@ -3,7 +3,7 @@
         var title = ko.observable();
         
         var computed = ko.computed(function () {
-            return title + "!!!"
+            return title() + "!!!"
         });
 
         function activate() {

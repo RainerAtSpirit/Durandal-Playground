@@ -1,20 +1,18 @@
 ﻿define(['durandal/app'], function (app) {
-        
-        var firstName = ko.observable("Planet");
-        var lastName = ko.observable("Earth");
 
-        var fullName = ko.computed(function () {
-            // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
-            return firstName() + " " + lastName();
-        });
+    var title = ko.observable();
 
-        function viewAttached(view) {
-            firstName = "Planet", lastname = "Earth";
-        };
+    var computed = ko.computed(function () {
+        return title + "!!!"
+    });
 
-        return  {
-            firstName: firstName,
-            lastName: lastName,
-            fullName: fullName
-        }
+    function activate() {
+        title("I\'ve some issues");
+    };
+
+    return {
+        title: title,
+        computed: title,
+        activate: activate
+    }
 });
