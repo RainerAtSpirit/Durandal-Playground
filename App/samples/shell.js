@@ -3,7 +3,9 @@
     return {
         router: router,
         activate: function () {
-            router.map([
+          router.map([
+                { url: 'fiddles', moduleId: 'fiddles/index', name: 'Fiddles', visible: true },
+                { url: 'fiddles/:name', moduleId: 'fiddles/index', name: 'Fiddle' },
                 { url: 'hello', moduleId: 'samples/hello/index', name: 'Hello World', visible: true },
                 { url: 'view-composition', moduleId: 'samples/viewComposition/index', name: 'View Composition', visible: true },
                 { url: 'modal', moduleId: 'samples/modal/index', name: 'Modal Dialogs', visible: true },
@@ -14,7 +16,7 @@
                 { url: 'knockout-samples', moduleId: 'samples/knockout/index', name: 'Knockout Samples', visible: true }
             ]);
             
-            return router.activate('hello');
+          return router.activate('fiddles');
         }
     };
 });
