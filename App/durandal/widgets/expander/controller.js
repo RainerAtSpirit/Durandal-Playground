@@ -11,6 +11,10 @@
 
         return item.toString();
     };
+    
+    ctor.prototype.activate = function(){
+        console.log('Grettings from activate')
+    }
 
     ctor.prototype.afterRenderItem = function(elements, item) {
         var parts = widget.getParts(elements);
